@@ -1,0 +1,27 @@
+{
+  "name": "Wabi-Sabi",
+  "version": "0.0.1",
+  "description": "SocNet",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanasugara/wabi-sabi.git"
+  },
+  "author": "kanasugara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanasugara/wabi-sabi/issues"
+  },
+  "homepage": "https://github.com/kanasugara/wabi-sabi",
+  "dependencies": {
+    "cookie-parser": "^1.3.5",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "morgan": "^1.6.1"
+  }
+}
