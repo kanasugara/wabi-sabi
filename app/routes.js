@@ -27,7 +27,11 @@ module.exports = function(app, passport){
 		res.render('profile.ejs', { user: req.user });
 	});
 	
-	app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
+	app.get('/auth/facebook', passport.authenticate('facebook', { 
+		scope: 'email' 
+	}),
+    function(req, res){
+	});
 	
 	app.get('/auth/facebook/callback',
 	  passport.authenticate('facebook', { successRedirect: '/profile',
