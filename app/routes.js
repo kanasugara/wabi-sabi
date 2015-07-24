@@ -37,7 +37,7 @@ module.exports = function(app, passport){
 	  passport.authenticate('facebook', { successRedirect: '/profile',
 	                                      failureRedirect: '/' }));	
 	
-		app.get('/auth/google', passport.authenticate('google', { 
+	app.get('/auth/google', passport.authenticate('google', { 
 		scope: ['profile','email'] 
 	}),
     function(req, res){
@@ -45,6 +45,16 @@ module.exports = function(app, passport){
 	
 	app.get('/auth/google/callback',
 	  passport.authenticate('google', { successRedirect: '/profile',
+	                                      failureRedirect: '/' }));	
+	
+	app.get('/auth/vkontakte', passport.authenticate('vkontakte', { 
+		scope: 'email' 
+	}),
+    function(req, res){
+	});
+	
+	app.get('/auth/vkontakte/callback',
+	  passport.authenticate('vkontakte', { successRedirect: '/profile',
 	                                      failureRedirect: '/' }));	
 	
 	app.get('/logout', function(req, res) {

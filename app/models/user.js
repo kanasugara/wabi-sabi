@@ -9,14 +9,34 @@ var userSchema = mongoose.Schema({
 		id: String,
 		token: String,
 		email: String,
-		name: String,
-		gender: String
+		name: {
+			firstName: String,
+			lastName: String
+		},
+		gender: String,
+		profileUrl: String
 	},
 	google: {
 		id: String,
 		token: String,
 		email: String,
-		name: String
+		name: {
+			firstName: String,
+			lastName: String
+		},
+		gender: String,
+		profileUrl: String
+	},
+	vkontakte: {
+		id: String,
+		username: String,
+		token: String,
+		email: String,
+		name: {
+			firstName: String,
+			lastName: String
+		},
+		profileUrl: String
 	}
 });
 
