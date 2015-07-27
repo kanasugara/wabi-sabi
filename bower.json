@@ -1,0 +1,16 @@
+{
+  "name": "Wabi-Sabi",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kanasugara/wabi-sabi",
+  "authors": [
+    "kanasugara <mriynuk@hotmail.com>"
+  ],
+  "description": "SocNet",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0",
+    "angular": "~1.4.3"
+  },
+  "install": "public/libs"
+}
