@@ -1,6 +1,6 @@
 <!-- views/profile.ejs -->
 <!DOCTYPE html>
-<html ng-app>
+<html data-ng-app='myApp'>
 <head>
     <title>Node Authentication</title>
    
@@ -13,16 +13,20 @@
 </head>
 <body>
 
-    <div class="container">
+   <div class="container">
         <div class="page-header text-center">
             <h1><span class="fa fa-anchor"></span> Our First App</h1>
-            <input type='text' name='name' ng-model='name'>
-            <br><br>
-           <div class="alert alert-{{name}}" role="alert">Hello World - {{ name }}</div>
+            <input type="text" name="name" ng-model="name">
+            <br>
+            <div class="alert alert-{{name}}" role="alert">Hello World - {{ name }}</div>
+            <a href="/page1">Page 1</a> - 
+            <a href="/page2">Page 2</a>
         </div>
     </div>
-    
+    <div ng-view></div>
     <script type="text/javascript" src="libs/angular/angular.js"></script>
-    
+    <script type="text/javascript" src="libs/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/page1Controller.js"></script>
 </body>
 </html>
