@@ -37,6 +37,7 @@ var userSchema = mongoose.Schema({
 			lastName: String
 		},
 		gender: String,
+		avatar: String,
 		profileUrl: String
 	}
 });

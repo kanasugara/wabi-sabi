@@ -52,5 +52,5 @@ app.use('/', secure);
 // 	console.log(req.session);
 // });
 
-app.listen(port);
+app.listen(port,process.env.IP);
 console.log('Server running on port: ' + port);

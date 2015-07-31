@@ -1,0 +1,83 @@
+body {
+	font-family: "RobotoMedium", sans-serif;
+	font-size: 16px;
+	background-color: #999;
+}
+.header_menu{
+	margin-bottom:0;
+	height:50px;
+	-webkit-box-shadow: inset 0px -10px 38px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px -10px 38px -10px rgba(0,0,0,0.75);
+	box-shadow: inset 0px -10px 38px -10px rgba(0,0,0,0.75);
+}
+.navbar-right{
+	margin-right: 0;
+}
+.one{
+	background-color: #eee;
+	padding: 0;
+}
+.two{
+	margin: 0 auto;
+}
+.three{
+	width:72.5px;
+	height:100%;
+	background-color: #555;
+	padding: 0;
+	text-align: center;
+	line-height: 60px;
+	font-size:25px;
+	
+}
+.four{
+	background-color: #333;
+    width:1025px;
+    height: 100%;
+    padding: 0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.myAvatar{
+	width:40px;
+	height:40px;
+	background-color: #eee;
+	border-radius: 50%;
+	margin-top: 5px;
+	margin-left: 15px;
+	-webkit-box-shadow:  0px 1px 12px 1px rgba(51,138,184,0.75),  0px -1px 12px 1px rgba(51,138,184,0.75), 1px 0px 12px 1px rgba(51,138,184,0.75), -1px 0px 12px 1px rgba(51,138,184,0.75) ;
+	-moz-box-shadow:   0px 1px 12px 1px rgba(51,138,184,0.75),  0px -1px 12px 1px rgba(51,138,184,0.75), 1px 0px 12px 1px rgba(51,138,184,0.75), -1px 0px 12px 1px rgba(51,138,184,0.75) ;
+	box-shadow:   0px 1px 12px 1px rgba(51,138,184,0.75),  0px -1px 12px 1px rgba(51,138,184,0.75), 1px 0px 12px 1px rgba(51,138,184,0.75), -1px 0px 12px 1px rgba(51,138,184,0.75) ;
+	transition:all ease-in-out 450ms;
+}
+.myAvatar:hover{
+	-webkit-box-shadow:  0px 1px 14px 2px rgba(101,191,240,0.75),  0px -1px 14px 2px rgba(101,191,240,0.75), 1px 0px 14px 2px rgba(101,191,240,0.75), -1px 0px 14px 2px rgba(101,191,240,0.75) ;
+	-moz-box-shadow:   0px 1px 14px 2px rgba(101,191,240,0.75),  0px -1px 14px 2px rgba(101,191,240,0.75), 1px 0px 14px 2px rgba(101,191,240,0.75), -1px 0px 14px 2px rgba(101,191,240,0.75) ;
+	box-shadow:   0px 1px 14px 2px rgba(101,191,240,0.75),  0px -1px 14px 2px rgba(101,191,240,0.75), 1px 0px 14px 2px rgba(101,191,240,0.75), -1px 0px 14px 2px rgba(101,191,240,0.75) ;
+}
+.online_friends{
+	background-color: #eee;
+	width:50px;
+	height:50px;
+	margin: 5px 5px 5px 5px;
+	border-radius: 50%;
+	display:inline-block;
+	position: relative;
+	text-align: center;
+	line-height: 50px;
+	font-size:25px;
+	transition:all ease-in-out 200ms;
+}
+.glyphicon-triangle-left, .glyphicon-triangle-right{
+	transition:all ease-in-out 300ms;
+}
+.glyphicon-triangle-left:hover, .glyphicon-triangle-right:hover{
+	color:white;
+}
+.online_friends:hover{
+	color:white;
+	background-color: #333;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(12,125,245,0.75), inset 0px -1px 0px 0px rgba(12,125,245,0.75),inset 1px 0px 0px 0px rgba(12,125,245,0.75),inset -1px 0px 0px 0px rgba(12,125,245,0.75) ;
+	-moz-box-shadow:  inset 0px 1px 0px 0px rgba(12,125,245,0.75), inset 0px -1px 0px 0px rgba(12,125,245,0.75),inset 1px 0px 0px 0px rgba(12,125,245,0.75),inset -1px 0px 0px 0px rgba(12,125,245,0.75) ;
+	box-shadow:  inset 0px 1px 0px 0px rgba(12,125,245,0.75), inset 0px -1px 0px 0px rgba(12,125,245,0.75),inset 1px 0px 0px 0px rgba(12,125,245,0.75),inset -1px 0px 0px 0px rgba(12,125,245,0.75) ;
+}

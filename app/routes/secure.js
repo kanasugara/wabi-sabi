@@ -12,11 +12,15 @@ module.exports = function(router, passport){
 	});
 
 	router.get('/home', function(req, res){
-		res.render('secured/home.ejs');
+		res.render('secured/home.ejs', { user: req.user });
+	});
+	
+	router.get('/main', function(req, res){
+		res.render('secured/main.ejs', { user: req.user });
 	});
 
 	router.get('/*', function(req, res){
-		res.redirect('/home');
+		res.redirect('/main');
 	});
 
 };

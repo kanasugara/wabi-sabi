@@ -37,7 +37,7 @@ module.exports = function(passport){
 					newUser.local.username = email;
 					newUser.local.password = newUser.generateHash(password);
 
-					newUser.save(function(err){
+					newUser.save(function(err, data){
 						if(err)
 							throw err;
 						return done(null, newUser);
@@ -201,7 +201,7 @@ module.exports = function(passport){
         clientID:       configAuth.vkontakteAuth.clientID,
         clientSecret:   configAuth.vkontakteAuth.clientSecret,
         callbackURL:    configAuth.vkontakteAuth.callbackURL,
-        profileFields: ["email"],
+        profileFields: ["email, photos"],
         passReqToCallback: true
       },
       function(req, accessToken, refreshToken, profile, done) {
@@ -221,6 +221,7 @@ module.exports = function(passport){
                         newUser.vkontakte.name.firstName = profile.name.givenName;
                         newUser.vkontakte.name.lastName = profile.name.familyName;
                         newUser.vkontakte.gender = profile.gender;
+                        newUser.vkontakte.avatar = profile.photos[0].value;
                         newUser.vkontakte.profileUrl = profile.profileUrl;
 
                         newUser.save(function(err){
@@ -239,6 +240,7 @@ module.exports = function(passport){
                         user.vkontakte.name.firstName = profile.name.givenName;
                         user.vkontakte.name.lastName = profile.name.familyName;
                         user.vkontakte.gender = profile.gender;
+                        user.vkontakte.avatar = profile.photos[0].value;
                         user.vkontakte.profileUrl = profile.profileUrl;
 
 					user.save(function(err){

@@ -9,7 +9,7 @@ module.exports = function(router, passport){
 		res.render('auth/login.ejs', { message: req.flash('loginMessage') });
 	});
 	router.post('/login', passport.authenticate('local-login', {
-		successRedirect: '/profile',
+		successRedirect: '/main',
 		failureRedirect: '/login',
 		failureFlash: true
 	}));
@@ -37,7 +37,7 @@ module.exports = function(router, passport){
 	});
 	
 	router.get('/facebook/callback',
-	  passport.authenticate('facebook', { successRedirect: '/profile',
+	  passport.authenticate('facebook', { successRedirect: '/main',
 	                                      failureRedirect: '/' }));	
 	
 	router.get('/google', passport.authenticate('google', { 
@@ -47,7 +47,7 @@ module.exports = function(router, passport){
 	});
 	
 	router.get('/google/callback',
-	  passport.authenticate('google', { successRedirect: '/profile',
+	  passport.authenticate('google', { successRedirect: '/main',
 	                                      failureRedirect: '/' }));	
 	
 	router.get('/vkontakte', passport.authenticate('vkontakte', { 
@@ -57,7 +57,7 @@ module.exports = function(router, passport){
 	});
 	
 	router.get('/vkontakte/callback',
-	  passport.authenticate('vkontakte', { successRedirect: '/profile',
+	  passport.authenticate('vkontakte', { successRedirect: '/main',
 	                                      failureRedirect: '/' }));	
 	
 	router.get('/connect/facebook', passport.authorize('facebook', { scope: 'email' }));
@@ -71,7 +71,7 @@ module.exports = function(router, passport){
 	});
 
 	router.post('/connect/local', passport.authenticate('local-signup', {
-		successRedirect: '/profile',
+		successRedirect: '/main',
 		failureRedirect: '/connect/local',
 		failureFlash: true
 	}));

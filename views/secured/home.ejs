@@ -3,9 +3,7 @@
 <html data-ng-app='myApp'>
 <head>
     <title>Node Authentication</title>
-   
-   
-    <link href="libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" >
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <style>
         body        { padding-top:80px; word-wrap:break-word; }
@@ -18,8 +16,7 @@
             <h1><span class="fa fa-anchor"></span> Our First App</h1>
             <input type="text" name="name" ng-model="name">
             <br>
-            <div class="alert alert-{{name}}" role="alert">Hello World - {{ name }}</div>
-            <a href="/page1">Page 1</a> - 
+            <div class="alert alert-{{name}}" role="alert">Hello World -  <%= user.facebook.name.firstName %> </div> <a href="/page1">Page 1</a> -
             <a href="/page2">Page 2</a>
         </div>
     </div>
